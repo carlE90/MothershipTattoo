@@ -1,0 +1,31 @@
+<?php if($adminController -> is_admin() == true): ?>
+
+		<div class="addArticle">
+			<?php if(array_key_exists("message",$_GET)) : ?>
+		        <p class="message"><?= $_GET["message"] ?></p>
+		    <?php endif; ?>
+		
+			<table class="tables">
+				<thead>
+					<tr>
+						<th>Tatoueur / Tatoueuse</th>
+						<th>Éditer</th>
+						<th>Supprimer</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach($artists as $info):?>
+				    <tr>
+				    	
+				    	<td><?= $info['pseudo']; ?></td>
+				    	<td><a title="Edit" href="index.php?action=editArtist&id_artist=<?=$info["id_artist"]?>"><i class="fas fa-edit"></a></td>
+					    <td><a title="Delete" href="index.php?action=removeArtist&id_artist=<?=$info["id_artist"]?>"><i class="far fa-trash-alt"></i></a></td>
+				    </tr>
+				    <?php endforeach; ?>
+				</tbody>
+			</table>
+		</div>
+		
+<?php else: ?>
+<?php header('Location:index.php'); ?>
+<?php endif; ?>

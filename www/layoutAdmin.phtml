@@ -1,0 +1,76 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<!-- CSS -->
+	
+	<link rel="stylesheet" href="www/css/styleAdmin.css" type="text/css">
+    <link rel="stylesheet" href="www/css/normalize.css" type="text/css">
+	
+	<!--FONT AWESOME -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+	
+	
+	<title>Admin Dashboard</title>
+</head>
+<body>
+	<header class="header">
+		
+	</header>
+	
+			<?php if($adminController->is_admin()): ?>
+			<nav>
+		
+				
+				<ul>	
+					<li><a href="#">EXTRA</a>
+						<ul class="dropdown">
+							<li><a title="Disconnect" href="index.php?action=disconnect"><i class="fas fa-sign-out-alt"></i> Deconnexion</a></li>
+							<li><a title="HomePage" href="index.php">Home page</a></li>
+						</ul>
+					</li>
+					
+					<li><a href="#">Article</a>
+						<ul class="dropdown">
+							<li><a title="AddArticles" href="index.php?action=addArticle">Add Article</a></li>
+							<li><a title="EditArticles" href="index.php?action=editArticle">Edit Articles</a></li>
+						</ul>
+					</li>
+					
+					<li> <a href="#">Artist</a>
+						<ul class="dropdown">
+							<li><a title="AddArtist" href="index.php?action=addArtist">Add Artist</a></li>
+							<li><a title="EditArtist" href="index.php?action=showArtist">Edit Artists</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Tattoo</a>
+						<ul class="dropdown">
+							<li><a title="AddTattoo" href="index.php?action=addTattoo">Add Tattoo</a></li>
+							<li><a title="EditTattoo" href="index.php?action=editTattoo">Edit Tattoo</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		<?php else:?>
+		<?php endif;?>
+	
+	<main>
+		
+		<section>
+			<article class="adminDashInfo">
+				
+				<button class="goBack" onclick="history.back()"><i class="fas fa-arrow-left"></i></button>
+				<?php require $template.".phtml"; ?>
+				
+			</article>
+			
+		</section>
+		
+		
+	</main>
+</body>
+</html>

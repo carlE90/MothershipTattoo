@@ -1,0 +1,374 @@
+
+body{
+	background-color:rgba(241, 235, 216, 1);
+
+}
+
+header img{
+	width:100%;
+}
+
+main{
+	background-image: url("../images/content/MTCEdited.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+section{
+	display:flex;
+	height: 90vh;
+	width: 100%;
+}
+
+/************************/
+/*		HEADER 			*/
+/************************/
+
+.header{
+	background-color:rgba(241, 235, 216, 1);
+	box-shadow: 0px 6px 9px 8px rgba(0,0,0,0.31);
+	height:7em;
+	background-image: url("../images/content/MTCAdmin.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display:none;
+}
+
+/************************/
+/*		LOGIN 			*/
+/************************/
+.adminLogin{
+	margin-top:5em;
+	width:80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+}
+.adminLogin fieldset{
+	border-radius:1rem;
+}
+
+.adminLogin img{
+	max-width:100%;
+}
+
+.group{
+	display:flex;
+	justify-content:space-between;
+	margin:1em;
+}
+
+.adminLogin img{
+	width:30%;
+	margin-bottom:1em;
+}
+
+/************************/
+/*		ADMIN BAR  		*/
+/************************/
+
+
+nav {
+	text-align:center;
+	display:none;
+}
+
+nav ul{
+	list-style-type: none;
+	background-color:rgba(221, 209, 170, 1);
+	margin: 0;
+	padding: 0;
+}
+
+nav > ul{
+	display: flex;
+	justify-content: center;
+}
+
+nav li{
+	display: inline-block;
+	position:relative;
+}
+
+nav a{
+	display: inline-block;
+	min-width: 10em;
+	padding: 1em 2em;
+	color: black;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+nav a:hover, nav a:active{
+	text-decoration:none;
+	color:rgba(241, 235, 216, 1);
+}
+
+.dropdown{
+	position: absolute;
+	top:100%;
+	left:0;
+	display:none; /*change back to none*/
+}
+
+
+nav li:hover > .dropdown{
+	display:block;
+	
+}
+
+nav li:hover{
+	background-color:rgba(26, 71, 66, 1);
+	
+}
+
+nav li:hover ul {
+	display: block;
+}
+/************************/
+/*		ADMIN PAGE 		*/
+/************************/
+
+.admin{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.adminButtons{
+	
+	margin-top:20%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.adminDash{
+	margin-bottom:2em;
+	text-align:center;
+	width:80%;
+}
+.adminDash a{
+	padding:1rem;
+	background-color:#938587bf;
+	border-radius: 2rem;
+	width: 85%;
+	display: inline-block;
+	text-decoration:none;
+	margin: 0 0.5em;
+	height: 2em;
+	font-size: 5em;
+	align-items: center;
+	justify-content: center;
+	color:rgba(248, 196, 113, 1);
+}
+
+.adminDash .far, .adminDash .fas{
+	font-size:4em;
+	color:rgba(54, 44, 166, 1);
+}
+
+
+.articlesAdmin{
+	display:none;
+}
+
+.goBack{
+	position: fixed;
+	top: 0.5em;
+	left: 0.5em;
+	width: 3em;
+	height: 3em;
+	border: none;
+	background: #0003;
+	border-radius: 6em;
+
+	font-size: 2em;
+}
+
+.adminDashInfo{
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/************************/
+/* 	 ADD ARTICLES       */
+/************************/
+
+form h2{
+	width: 20em;
+	margin-left: auto;
+	margin-right: auto;
+	background: #000000b3;
+	color: rgba(248, 196, 113, 1);
+	border-radius: 6em;
+}
+
+fieldset{
+	border:none;
+	background:#000000b3;
+	color: rgba(248, 196, 113, 1);
+	border-radius: 6em;
+}
+
+.addArticle{
+	width:80%;
+	margin-top:25%;
+	margin-bottom: 5em;
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+}
+legend p{
+	margin:1em;
+}
+.addCenter{
+	display:block;
+	margin-bottom:1em;
+	margin-left: auto;
+	margin-right: auto;
+}
+.contentArea{
+	width:80%;
+	height:4em;
+	resize: none;
+	border: 1px solid #ccc;
+	font-size:2em;
+}
+
+textarea:focus, input:focus{
+	outline:none;
+}
+.addArticle input{
+	width:80%;
+	font-size: 2em;
+	padding:0.2em;
+}
+.addArticle label{
+	font-size:2em;
+}
+
+button{
+	width:13em;
+	height:3em;
+	margin-top:2em;
+}
+
+form img{
+	width:100%;
+}
+
+.message{
+	color:green;
+}
+
+/************************/
+/* 	 	TABLES 		    */
+/************************/
+
+.tables td, .tables th {
+    padding: .75rem;
+    font-size:2em;
+    width:30%;
+
+}
+
+.tables thead th {
+    vertical-align: bottom;
+    font-size:2em;
+}
+
+tbody tr:nth-child(odd){
+  background-color: #00000024;
+}
+
+
+.tables{
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 1rem;
+	background-color: #0000007d;
+	color: rgba(221, 209, 170, 1);
+}
+
+.tables a{
+	color:rgba(221, 209, 170, 1);
+}
+
+.editTattoos img{
+	width:50%;
+}
+
+/************************/
+/* 	 	MEDIA QUERIES   */
+/************************/
+
+
+@media only screen and (min-width: 780px){
+
+}
+
+@media only screen and (min-width: 1200px){
+
+	.header, nav{
+		display:block;
+	}
+	
+	.adminButtons{
+		visibility:hidden;
+	}
+	
+	.addArticle{
+		margin-top:10em;
+	}
+	
+	.addArticle form{
+		width:70%;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	.addArticle label {
+    	font-size: 1em;
+	}
+	.addArticle input {
+    	font-size: 1em;
+    	margin-bottom: 1em;
+	}
+	.contentArea{
+		font-size:2em;
+	}
+	
+	.tables td, .tables th {
+    	font-size: 1em;
+	}
+	
+	.articlesAdmin{
+		display:block;
+	}
+	
+	.tables{
+		width: 84%;
+	}
+	
+	form img {
+    	width: 55%;
+	}
+	
+	.loginForm{
+	    width: 50%;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	.goBack{
+		display:none;
+	}
+}

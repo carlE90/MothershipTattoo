@@ -1,0 +1,36 @@
+
+<?php if($adminController -> is_admin() == true): ?>
+<div class="addArticle">
+	<?php if(isset($message)) : ?>
+   		<p class="message"> <?php echo $message ?> </p>
+   	<?php endif; ?>
+   	
+	<form action="index.php?action=addTattoo" method="POST" enctype="multipart/form-data">
+		<h2>Ajouter des photos de tatouages</h2>
+		<fieldset>
+
+				<div>
+				<!-- Tattoo artists -->	
+				<label class="addCenter" for="pseudo">Choisi l'artiste</label>
+				<select id="pseudo" name="id_artist">
+					<?php foreach($users as $info):?>
+						<option value="<?= $info['id_artist'] ?>" ><?= $info['pseudo'] ?></option>
+					<?php endforeach; ?>	
+				
+				<!-- Tattoo Photo -->
+				<div>
+					<input class="addCenter" type="file" id="photo" name="photo" multiple>
+				</div>
+				
+				<button type="submit">Send</button>
+				<button type="reset">Cancel</button>
+			</div>
+		</fieldset>
+	</form>
+	
+	
+	
+</div>
+<?php else: ?>
+	<?php header('Location:index.php'); ?>
+<?php endif; ?>

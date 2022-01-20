@@ -1,0 +1,59 @@
+<?php if(!$adminController->is_admin()): ?>
+
+	<article class="adminLogin">
+		
+		<form class="loginForm" action="index.php?action=connectAdmin" method="post">
+			<fieldset>
+				
+			<legend>Connexion Admin</legend>
+			
+		  	<div class="group">
+			    <label for="email">Email address</label>
+			    <input type="email" placeholder="Enter email" id="email" name="email">
+		  	</div>
+		  	
+			<div class="group">
+			    <label for="password">Password</label>
+		  		<input type="password" placeholder="Password" name="password" id="password">
+		  	</div>
+		  	
+		  	<button type="submit">Submit</button>
+		  	
+		  	</fieldset>
+		</form>
+	</article>	
+
+<?php else: ?>
+	<article class="admin">
+		
+		<div class="adminButtons">
+
+			<div class="adminDash">
+		    	<a href="index.php?action=addArticle">Add article</a>
+		    </div>
+		    
+		    <div class="adminDash">
+		    	<a href="index.php?action=editArticle">Edit Articles</a>
+		    </div>
+		    
+		    <div class="adminDash">
+		    	<a href="index.php?action=showArtist">Show Artists</a>
+		    </div>
+		    
+		    <div class="adminDash">
+		    	<a href="index.php?action=addArtist">Add Artist</a>
+		    </div>
+		    
+		    <div class="adminDash">
+		    	<a href="index.php?action=addTattoo">Add Tattoo</a>
+		    </div>
+		    
+		    <div class="adminDash">
+		    	<a href="index.php?action=editTattoo">Edit tattoos</a>
+		    </div>
+
+	    </div>
+    </article>
+    
+
+<?php endif;?>

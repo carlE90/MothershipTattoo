@@ -1,0 +1,101 @@
+
+
+        <!-- Beginning of slider-->
+        <div id="slider-wrapper">
+            <div class="slider">
+
+                <div class="slide active" >
+                    <img src="www/images/slider/2.jpg" alt="Mothership2">
+                </div>
+                <div class="slide" >
+                    <img src="www/images/slider/3.jpg" alt="Mothership2">
+                </div>
+                <div class="slide" >
+                    <img src="www/images/slider/4.jpg" alt="Mothership2">
+                </div>
+
+                <div class="btn-nav leftArrow"><i class="fas fa-chevron-left"></i></div>
+                <div class="btn-nav rightArrow"><i class="fas fa-chevron-right"></i></div>
+            </div>
+        </div>
+        <!--End of slider-->
+
+
+
+    <!-- MISES A JOUR + ARTICLES -->
+    <div class="maj">
+       <h2>Á la une</h2>
+    </div>
+    <div class="articleDiv">
+       <?php foreach($articles as $article): ?>
+       <div class="infoPage">
+          <div class="articleInfo">
+             <img src="www/images/articles/<?= $article['photo']?>" alt="<?= $article['photo']?>">
+             <h2><?= $article['title'] ?></h2>
+             <p><?= $article['date'] ?></p>
+             <p><?= $article['content'] ?></p>
+          </div>
+       </div>
+       <?php endforeach;?>
+    </div>
+    
+    <!-- ABOUT US -->
+    <div class="maj" id="qsn">
+       <h2>Qui somme nous?</h2>
+    </div>
+    <div class="articleDiv" >
+		<?php foreach($artists as $info):?>
+		
+    		<div class="weAre">
+    		    <?php if(!empty($info['image'])):?>
+			        <img src="www/images/artist/<?= $info['photo']?>" alt="<?= $info['photo']?>">
+				<?php else : ?>
+				    <img src="www/images/artist/default.jpg" alt="default.jpg">
+			    <?php endif; ?>
+    		  
+              <div class="weAreInfo">
+                 
+                 <h2><?= $info['pseudo'] ?></h2>
+                 <p><?= $info['description'] ?></p>
+                 <a href="https://www.instagram.com/<?= $info['instagram'] ?>" title="Instagram"><?= $info['instagram'] ?></a>
+              </div>
+            </div>
+            
+	    <?php endforeach; ?>
+    </div>
+    
+    <div class="articleDiv" >
+        
+        <!-- CONTACT US -->
+        <div class="maj" id="cu">
+           <h2>Contact us</h2>
+        </div>
+        
+        <div class="googleMap">
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2530.7126914428045!2d3.0629280155288807!3d50.63245388211507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d54706b575ff%3A0x185a023ba4301687!2sMOTHERSHIP%20TATTOO%20CLUB!5e0!3m2!1sfr!2sfr!4v1641553196053!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            
+        </div>
+        
+        <div class="contactUs" >
+            <p>Adresse:</p>
+            <p>17 Rue du Plat, 59000 Lille</p>
+            <p>tel: +33649927395</p>
+            <p>Email: mothershiptattooclub@gmail.com</p>
+         </div>
+
+        
+        
+        <div class="contactUs">
+            <p>Horaires d'ouverture :</p>
+            <p>lundi FERMÉ</p>
+            <p>mardi 11:00–18:00</p>
+            <p>mercredi 11:00–19:00</p>
+            <p>jeudi 11:00–18:00</p>
+            <p>vendredi 12:00–19:30</p>
+            <p>samedi 12:00–19:30</p>
+            <p>dimanche FERMÉ</p>
+         </div>
+        
+    </div>
+

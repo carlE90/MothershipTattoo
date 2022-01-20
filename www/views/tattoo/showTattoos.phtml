@@ -1,0 +1,24 @@
+
+
+<div class="addArticle">
+	
+	<div class="mix-container">
+		<div class="mix-button">
+			<button type="button" data-filter="all">All</button>
+			<?php foreach($artists as $info):?>
+			<button type="button" data-filter=".category-<?= $info['pseudo'] ?>"><?= $info['pseudo'] ?></button>
+			<?php endforeach; ?>
+		</div>
+		
+		<div class="mix-content">
+			<?php foreach($tattoos as $info):?>
+				<div class="mix category-<?= $info['pseudo'] ?>" >
+				<img src="www/images/tattoos/<?= $info['photo'] ?>" alt="<?php $info['photo'] ?>">
+				</div>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</div>
+			
+
+		
